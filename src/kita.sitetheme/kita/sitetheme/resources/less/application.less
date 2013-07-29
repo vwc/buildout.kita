@@ -1,0 +1,212 @@
+// Custom application specific styles
+//--------------------------------------
+
+
+// Bootstrap overrides
+// ------------------
+
+@font-size-base:          16px;
+@line-height-base:        25px;
+
+@green:                #8dc73f;
+@blue:                 #6cc2e5;
+@light-blue:           #e6f4fd;
+body {
+    background-color: @light-blue;
+    height: 100%;
+}
+
+// Example for providing a data image via stylesheet
+// Add this class to any element to provide some extend of visual noise
+.make-some-noise {
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
+}
+
+// Use Blokk font as a lorem ipsum replacement
+.wireframed {
+  font-family: 'redactedregular', 'BLOKKNeue-Regular';
+  font-size: @line-height-base;
+  color: @gray;
+}
+
+// Example styles for a custom editbar override of the basic
+// twitter bootstarp navbar to make the edit bar look like a
+// browser toolbar
+body > header {
+    width: 100%;
+    background-color: @green;
+    border-bottom: 20px solid @blue;
+    //margin-bottom: @line-height-base;
+    #toolbar + nav {
+        margin-top: @navbar-height;
+        .navbar-inner {
+            border-radius:0px;
+        }
+    }
+    // Active nav items
+    #main-nav .selected > a,
+    #main-nav .selected > a:hover,
+    #main-nav .selected > a:focus {
+      color: @navbar-link-active-color;
+      text-decoration: none;
+      background-color: @navbar-link-active-bg;
+      -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
+         -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
+              box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
+    }
+
+}
+
+#header-wrapper {
+    background: url(../img/header_bg.png) 0 0 no-repeat transparent;
+    .size(1089px, 254px); 
+        #logo-wrapper {
+        #logo {
+            margin-top: 65px;
+            margin-left: 20px;
+            .size(100%, 100px);
+            //background-size: 100%;
+            display: block;
+            background: url(../img/logo.png) 0 0 no-repeat transparent;
+            text-indent: -3000px;
+            overflow:hidden;
+        }        
+    }
+}
+.container {
+  overflow: hidden;
+}
+#headerbutton {
+      background: url(../img/header_icon.png) 0 0 no-repeat transparent;
+      .size(200px, 200px);
+      text-indent: -3000px;
+      overflow:hidden;
+      position: absolute;
+      top: 200px;
+      z-index: 1;
+}
+#content-wrapper {
+  background-color: #fff;
+  background: url(../img/content_bg.png) 0 0 repeat-y transparent;
+  width: 1089px;
+  min-height: 100%;
+  height: auto !important;
+  overflow: hidden;
+  //display: inline-block;
+  #sidebar {
+    width: 30%;
+    float:left;
+    padding-left: 18px;
+    padding-right: 20px;
+      dl.portlet {
+        margin-top: 120px;
+        dd.portletItem {
+          padding: 0;
+          margin: 0;
+          ul.navTree {
+            margin: 0;
+          }
+        }
+      }
+      ul {
+        width: 100%;
+        list-style: none;
+        li {
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-bottom: 3px solid #fff;
+          a {
+            padding: 5px;
+            color: #fff;
+            margin-left: 20px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+  #content {
+    h1.documentFirstHeading {
+      color: @green;
+    }
+    padding-left: 20px;
+    padding-right: 10px;
+    width: 70%;
+    float: right;
+    border-bottom: 1px solid @blue;
+  }
+  #sidebar-left {
+    padding-left: 20px;
+    padding-right: 10px;
+    background-color: #fff;
+    width: 70%;
+    float: right;
+    dl.portlet {
+      width: 100%;
+      dt.portletHeader {
+        a {
+          color: @green;
+        }
+      }
+      dd.portletItem {
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid @blue;
+        a {
+          color: #000;
+          text-decoration: underline;
+        }
+        span.portletItemDetails {
+          color: @green;
+        }
+        #more {
+          color: @green;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// Some eample styles for portlets
+
+.portlet {
+  .portletHeader {
+  /*  font-size: @font-size-base * 1.5;
+    padding: @padding-large;
+    border-bottom: 1px solid @grayLight;*/
+  }
+  .portletItem {
+    padding: @padding-large;
+  }
+  .portletFooter {
+    padding: @padding-large;
+    font-size: @font-size-small;
+  }
+}
+
+// Example styles for listings (e.g. folder summary view)
+
+.tileItem {
+  .media();
+  .tileHeadline {
+    .media-heading();
+  }
+}
+
+
+// Example styles for a HMTL5 based site footer
+body > footer {
+    clear:both;
+    background-color: @green;
+    //margin-top: @line-height-base;
+    padding: @line-height-base 0;
+    border-top: 20px solid @blue;
+    color: #fff;
+    padding-left: 90px;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+}
