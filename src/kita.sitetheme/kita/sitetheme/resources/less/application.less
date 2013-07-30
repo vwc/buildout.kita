@@ -105,12 +105,25 @@ body > header {
           margin: 0;
           ul.navTree {
             margin: 0;
+            li.navTreeItem {
+              .navTreeLevel1 {
+                margin-top: 10px;
+                background-color: @blue;
+                border-top: 3px solid #fff;
+              }
+            }
+            li.navTreeCurrentNode {
+                background-color: @blue;
+              }
           }
         }
       }
       ul {
         width: 100%;
         list-style: none;
+        :last-child {
+          border-bottom: 0px solid @green;
+        }
         li {
           width: 100%;
           padding-top: 10px;
@@ -121,20 +134,43 @@ body > header {
             color: #fff;
             margin-left: 20px;
             text-transform: uppercase;
+            display: block;
           }
         }
       }
     }
-
+  #content .section-front-page {
+       border-bottom: 1px solid @blue;
+  }
   #content {
+    #content-core {
+      h3 {
+        color: @blue;
+      }
+      h2 {
+        color: @blue;
+        font-size: 30px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+      }
+    }
+    .tileItem {
+      border-bottom: 1px solid @blue;
+      h2 {
+        a {color: @blue;}
+      }
+    }
+    .tileFooter a {
+      color: @green;
+    }
     h1.documentFirstHeading {
       color: @green;
     }
     padding-left: 20px;
-    padding-right: 10px;
+    padding-right: 35px;
     width: 70%;
     float: right;
-    border-bottom: 1px solid @blue;
+
   }
   #sidebar-left {
     padding-left: 20px;
