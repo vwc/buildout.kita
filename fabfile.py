@@ -14,45 +14,21 @@ env.port = '22222'
 env.user = 'root'
 env.hosts = ['5zu2']
 env.webserver = '/opt/webserver/buildout.webserver'
-<<<<<<< HEAD
-env.code_root = '/opt/sites/kita/buildout.lita'
-=======
 env.code_root = '/opt/sites/kita/buildout.kita'
->>>>>>> 83390d3d8dd856f556dc796ce869ef1a7ad42779
-env.local_root = '/Users/anjaradtke/vw-devel/current/kita_beta/buildout.kita'
+env.local_root = '/Users/cb/dev/pg/buildout.kita'
 env.sitename = 'kita'
 env.code_user = 'root'
 env.prod_user = 'www'
 
 
 @task
-def bo_conf():
-    #t = cuisine.file_local_read('packages.cfg')
-    filename = '%s/packages.cfg' % env.local_root
-    with open(filename, 'r+a') as f:
-        read_data = f.read()
-        # config = ConfigParser.ConfigParser()
-        print read_data
-
-
-def ls():
-    """ Low level configuration test """
-    with cd(env.code_root):
-        run('ls')
-
-
-def supervisorctl(*cmd):
-    """Runs an arbitrary supervisorctl command."""
-    with cd(env.webserver):
-        run('bin/supervisorctl ' + ' '.join(cmd))
-
-
 def deploy():
     """ Deploy current master to production server """
     project.site.update()
-    project.site.estart()
+    project.site.restart()
 
 
+@task
 def deploy_full():
     """ Deploy current master to production and run buildout """
     project.site.update()
@@ -60,8 +36,15 @@ def deploy_full():
     project.site.restart()
 
 
+@task
 def rebuild():
     """ Deploy current master and run full buildout """
     project.site.update()
     project.site.build_full()
     project.site.restart()
+
+
+@task
+def get_data():
+    """ Copy live database for local development """
+    project.db.download_data()
