@@ -6186,7 +6186,6 @@ body > header #main-nav .selected > a:focus {
 #content-wrapper #sidebar-left dl.portlet dd.portletItem {
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #6cc2e5;
 }
 #content-wrapper #sidebar-left dl.portlet dd.portletItem a {
   color: #000;
