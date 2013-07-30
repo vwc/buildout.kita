@@ -6112,9 +6112,20 @@ body > header #main-nav .selected > a:focus {
 #content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree {
   margin: 0;
 }
+#content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li.navTreeItem .navTreeLevel1 {
+  margin-top: 10px;
+  background-color: #6cc2e5;
+  border-top: 3px solid #fff;
+}
+#content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li.navTreeCurrentNode {
+  background-color: #6cc2e5;
+}
 #content-wrapper #sidebar ul {
   width: 100%;
   list-style: none;
+}
+#content-wrapper #sidebar ul :last-child {
+  border-bottom: 0px solid #8dc73f;
 }
 #content-wrapper #sidebar ul li {
   width: 100%;
@@ -6127,13 +6138,34 @@ body > header #main-nav .selected > a:focus {
   color: #fff;
   margin-left: 20px;
   text-transform: uppercase;
+  display: block;
+}
+#content-wrapper #content .section-front-page {
+  border-bottom: 1px solid #6cc2e5;
 }
 #content-wrapper #content {
   padding-left: 20px;
-  padding-right: 10px;
+  padding-right: 35px;
   width: 70%;
   float: right;
+}
+#content-wrapper #content #content-core h3 {
+  color: #6cc2e5;
+}
+#content-wrapper #content #content-core h2 {
+  color: #6cc2e5;
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+#content-wrapper #content .tileItem {
   border-bottom: 1px solid #6cc2e5;
+}
+#content-wrapper #content .tileItem h2 a {
+  color: #6cc2e5;
+}
+#content-wrapper #content .tileFooter a {
+  color: #8dc73f;
 }
 #content-wrapper #content h1.documentFirstHeading {
   color: #8dc73f;

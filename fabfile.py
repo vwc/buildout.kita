@@ -14,9 +14,13 @@ env.port = '22222'
 env.user = 'root'
 env.hosts = ['5zu2']
 env.webserver = '/opt/webserver/buildout.webserver'
+<<<<<<< HEAD
 env.code_root = '/opt/sites/kita/buildout.lita'
+=======
+env.code_root = '/opt/sites/kita/buildout.kita'
+>>>>>>> 83390d3d8dd856f556dc796ce869ef1a7ad42779
 env.local_root = '/Users/anjaradtke/vw-devel/current/kita_beta/buildout.kita'
-env.sitename = 'plonesite'
+env.sitename = 'kita'
 env.code_user = 'root'
 env.prod_user = 'www'
 
