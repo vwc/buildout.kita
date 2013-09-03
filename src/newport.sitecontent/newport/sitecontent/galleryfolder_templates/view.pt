@@ -16,7 +16,7 @@
               <tal:block tal:repeat="lines view/image_matrix">
                 <div class="row">
                 <tal:thumb tal:repeat="line lines">
-                <div class="col col-lg-3" tal:define="item line/item">
+                <div class="col col-lg-4" tal:define="item line/item">
                   <a href="" class="link-gallery"
                     tal:attributes="href item/original_url;
                                     rel string:prettyPhoto[gallery];">
