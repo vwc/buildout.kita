@@ -27,6 +27,7 @@
                                         data-image-url item/original_url;
                                         data-image-width item/original_width;
                                         data-image-height item/original_height;
+                                        title item/desc;
                                         class string:img-thumbnail" />
                   </a>
                 </div>
