@@ -110,12 +110,18 @@ body > header {
             li.navTreeItem {
               .navTreeLevel1 {
                 margin-top: 10px;
-                background-color: @blue;
+                background-color: #42A4C4;
                 border-top: 3px solid #fff;
               }
+              ul.navTree {
+                li.navTreeItem {
+                  background-color: @blue;
+                }
+              }
+              padding-right: 20px;
             }
             li.navTreeCurrentNode {
-                background-color: @blue;
+                background-color: #42A4C4;
               }
           }
         }
@@ -145,6 +151,9 @@ body > header {
        border-bottom: 1px solid @blue;
   }
   #content {
+        img.image-left, img.image-right, .captioned img {
+        border: 0px solid #fff;
+      }
     #content-core {
       #gallery-thumbs.gallery {
         .row {

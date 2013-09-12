@@ -6112,6 +6112,10 @@ body > header #main-nav .selected > a:focus {
 #content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree {
   margin: 0;
 }
+#content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li.navTreeItem  ul.navTree li.navTreeItem {
+  background-color: #6cc2e5;
+}
+
 #content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li:hover {
   background-color: #6cc2e5;
 }
@@ -6120,11 +6124,11 @@ body > header #main-nav .selected > a:focus {
 }
 #content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li.navTreeItem .navTreeLevel1 {
   margin-top: 10px;
-  background-color: #6cc2e5;
+  background-color: #42A4C4;
   border-top: 3px solid #fff;
 }
 #content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li.navTreeCurrentNode {
-  background-color: #6cc2e5;
+  background-color: #42A4C4;
 }
 #content-wrapper #sidebar ul {
   width: 100%;
@@ -6154,6 +6158,10 @@ body > header #main-nav .selected > a:focus {
   padding-right: 35px;
   width: 70%;
   float: right;
+}
+
+#content-wrapper #content img.image-left, img.image-right, .captioned img   {
+border: 0px solid #fff;
 }
 #content-wrapper #content #content-core {
   /*div.row div.col a.link-gallery img.img-thumbnail*/
