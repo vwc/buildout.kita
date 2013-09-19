@@ -6120,15 +6120,26 @@ body > header #main-nav .selected > a:focus {
   background-color: #6cc2e5;
 }
 #content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li.navTreeItemInPath {
-  background-color: #6cc2e5;
+  background-color: #42A4C4;
 }
+
 #content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li.navTreeItem .navTreeLevel1 {
   margin-top: 10px;
   background-color: #42A4C4;
   border-top: 3px solid #fff;
 }
+ ul.navTree li.navTreeItem ul.navTree li.navTreeItem ul.navTree
+#content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li.navTreeItem ul.navTree li.navTreeItem ul.navTreeLevel2 {
+  margin-top: 10px;
+  background-color: #42A4C4;
+  border-top: 3px solid #fff;
+}
+
 #content-wrapper #sidebar dl.portlet dd.portletItem ul.navTree li.navTreeCurrentNode {
   background-color: #42A4C4;
+}
+#content-wrapper.container div#sidebar dl.portlet dd.portletItem ul.navTree li.navTreeItem ul.navTree li.navTreeCurrentNode {
+  background-color: #42A4C4;  
 }
 #content-wrapper #sidebar ul {
   width: 100%;
