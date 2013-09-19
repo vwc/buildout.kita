@@ -73,6 +73,7 @@ class View(grok.View):
         for item in images:
             info = {}
             info['title'] = item.Title
+            info['desc'] = item.Description
             thumb = self.getImageTag(item, scalename='thumb')
             info['thumb_url'] = thumb['url']
             info['thumb_width'] = thumb['width']
